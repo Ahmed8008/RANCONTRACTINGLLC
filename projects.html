@@ -1,0 +1,2335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAN Contracting</title>
+  <!-- Favicon -->
+<link rel="icon" type="image/png" href="logo.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#0B2A63',
+            brand2: '#173E7A',
+            accent: '#E51B23',
+            ink: '#102A56',
+            mist: '#F4F7FC'
+          },
+          boxShadow: {
+            glow: '0 20px 70px rgba(11, 42, 99, .14)'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="min-h-screen bg-mist text-ink antialiased">
+
+  <!-- Modern responsive header -->
+  <header class="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 bg-white/90 backdrop-blur-xl shadow-sm">
+    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand2/40 to-transparent"></div>
+
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10"
+         aria-label="Main navigation">
+
+      <!-- Logo -->
+     <a href="#" class="group flex shrink-0 items-center" aria-label="RAN Innovations home">
+  <img 
+    src="Newistlogoo.png" 
+    alt="RAN Innovations" 
+    class="h-16 w-auto object-contain transition duration-300 
+           group-hover:scale-[1.02] 
+           sm:h-20 lg:h-24"
+  />
+</a>
+
+      <!-- Desktop navigation -->
+      <div class="hidden items-center gap-8 lg:flex">
+        <a href="index.html" class="relative text-sm font-semibold text-slate-700 transition hover:text-brand
+          after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-0 after:bg-accent
+          after:transition-all hover:after:w-full">Home</a>
+        <a href="about.html" class="relative text-sm font-semibold text-slate-700 transition hover:text-brand
+          after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-0 after:bg-accent
+          after:transition-all hover:after:w-full">About</a>
+        <a href="services.html" class="relative text-sm font-semibold text-slate-700 transition hover:text-brand
+          after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-0 after:bg-accent
+          after:transition-all hover:after:w-full">Services</a>
+        <a href="projects.html" class="relative text-sm font-semibold text-slate-700 transition hover:text-brand
+          after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-0 after:bg-accent
+          after:transition-all after:w-full">Projects</a>
+        <a href="contact.html" class="relative text-sm font-semibold text-slate-700 transition hover:text-brand
+          after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-0 after:bg-accent
+          after:transition-all hover:after:w-full">Contact</a>
+      </div>
+
+      <!-- CTA -->
+      <div class="hidden lg:block">
+        <a href="tel:+971567116993"
+           class="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-white
+                  shadow-lg shadow-brand/15 transition duration-300 hover:-translate-y-0.5
+                  hover:bg-brand2 hover:shadow-xl">
+          Let's Talk
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M4 10h11m0 0-4-4m4 4-4 4" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="menuBtn"
+              type="button"
+              class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200
+                     bg-white text-brand shadow-sm transition hover:bg-mist lg:hidden"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="mobileMenu">
+        <svg id="menuIcon" class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round"/>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu"
+         class="hidden border-t border-slate-200/80 bg-white/95 px-5 py-5 shadow-glow backdrop-blur-xl lg:hidden">
+      <div class="mx-auto max-w-7xl space-y-1">
+        <a href="index.html" class="block rounded-xl px-4 py-3 font-semibold text-slate-700 hover:bg-mist hover:text-brand">Home</a>
+        <a href="about.html" class="block rounded-xl px-4 py-3 font-semibold text-slate-700 hover:bg-mist hover:text-brand">About</a>
+        <a href="#services.html" class="block rounded-xl px-4 py-3 font-semibold text-slate-700 hover:bg-mist hover:text-brand">Services</a>
+        <a href="projects.html" class="block rounded-xl px-4 py-3 font-semibold text-slate-700 hover:bg-mist hover:text-brand">Projects</a>
+        <a href="contact.html" class="block rounded-xl px-4 py-3 font-semibold text-slate-700 hover:bg-mist hover:text-brand">Contact</a>
+        <a href="tel:+971567116993"
+           class="mt-3 flex items-center justify-center gap-2 rounded-xl bg-brand px-4 py-3 font-bold text-white
+                  transition hover:bg-brand2">
+          Let's Talk
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+<!-- =========================================================
+     RAN INNOVATIONS
+     PROJECTS / PROJECT PORTFOLIO SECTION
+========================================================= -->
+<section id="projects"
+         class="relative overflow-hidden bg-[#F5F8FC] py-20 sm:py-24 lg:py-28">
+
+  <!-- Background Decoration -->
+  <div class="pointer-events-none absolute -right-40 top-20 h-[450px] w-[450px]
+              rounded-full bg-[#0B2A63]/5 blur-3xl"></div>
+
+  <div class="pointer-events-none absolute -left-40 bottom-10 h-[400px] w-[400px]
+              rounded-full bg-[#E51B23]/5 blur-3xl"></div>
+
+
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+
+
+    <!-- ================= SECTION HEADER ================= -->
+
+    <div class="mx-auto max-w-3xl text-center">
+
+      <h2 class="mt-5 text-3xl font-black leading-tight
+                 text-[#0B2A63] sm:text-4xl lg:text-5xl">
+
+        Projects That Define
+        <span class="text-[#E51B23]">
+          Our Expertise
+        </span>
+
+      </h2>
+
+      <p class="mx-auto mt-5 max-w-2xl text-sm leading-7
+                text-slate-500 sm:text-base">
+
+        Explore a selection of projects delivered by RAN Contracting
+        across electrical, HVAC, CCTV, networking, civil works,
+        interior fit-out and technical services.
+
+      </p>
+
+    </div>
+
+
+    <!-- ================= PROJECT STATS ================= -->
+
+    <div class="mx-auto mt-12 grid max-w-4xl grid-cols-2
+                gap-3 sm:grid-cols-4 sm:gap-5">
+
+      <div class="rounded-2xl border border-slate-200
+                  bg-white p-5 text-center shadow-sm">
+
+        <div class="text-2xl font-black text-[#0B2A63]">
+          18+
+        </div>
+
+        <div class="mt-1 text-[10px] font-bold uppercase
+                    tracking-wider text-slate-400">
+          Featured Projects
+        </div>
+
+      </div>
+
+
+      <div class="rounded-2xl border border-slate-200
+                  bg-white p-5 text-center shadow-sm">
+
+        <div class="text-2xl font-black text-[#E51B23]">
+          UAE
+        </div>
+
+        <div class="mt-1 text-[10px] font-bold uppercase
+                    tracking-wider text-slate-400">
+          Project Coverage
+        </div>
+
+      </div>
+
+
+      <div class="rounded-2xl border border-slate-200
+                  bg-white p-5 text-center shadow-sm">
+
+        <div class="text-2xl font-black text-[#0B2A63]">
+          MEP
+        </div>
+
+        <div class="mt-1 text-[10px] font-bold uppercase
+                    tracking-wider text-slate-400">
+          Technical Expertise
+        </div>
+
+      </div>
+
+
+      <div class="rounded-2xl border border-slate-200
+                  bg-white p-5 text-center shadow-sm">
+
+        <div class="text-2xl font-black text-[#E51B23]">
+          100%
+        </div>
+
+        <div class="mt-1 text-[10px] font-bold uppercase
+                    tracking-wider text-slate-400">
+          Client Focus
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ================= PROJECT GRID ================= -->
+
+    <div class="mt-14 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+
+
+      <!-- =====================================================
+           PROJECT 01
+      ====================================================== -->
+
+      <div class="group overflow-hidden rounded-[1.75rem]
+                  border border-slate-200 bg-white
+                  shadow-[0_15px_45px_rgba(11,42,99,.08)]
+                  transition duration-500
+                  hover:-translate-y-2
+                  hover:shadow-[0_25px_65px_rgba(11,42,99,.16)]">
+
+        <!-- IMAGE -->
+
+        <div class="relative h-56 overflow-hidden">
+
+          <img
+            src="projects1.jpg"
+            alt="ENS School Sharjah Electrical HVAC Project"
+            class="h-full w-full object-cover transition duration-700
+                   group-hover:scale-110">
+
+          <div class="absolute inset-0 bg-gradient-to-t
+                      from-[#071D47]/80 via-[#071D47]/10 to-transparent">
+          </div>
+
+          <span class="absolute left-4 top-4 rounded-full
+                       bg-[#0B2A63] px-3 py-1.5 text-[10px]
+                       font-bold uppercase tracking-wider text-white">
+            Electrical · HVAC
+          </span>
+
+          <span class="absolute bottom-4 right-4 flex h-9 w-9
+                       items-center justify-center rounded-full
+                       bg-white/90 text-sm font-black text-[#0B2A63]
+                       backdrop-blur">
+            01
+          </span>
+
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div class="p-6">
+
+          <h3 class="text-xl font-black text-[#0B2A63]">
+            ENS School
+          </h3>
+
+          <div class="mt-5 grid grid-cols-2 gap-4">
+
+            <div>
+              <span class="text-[10px] font-bold uppercase
+                           tracking-wider text-slate-400">
+                Client
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Enige Solutions
+              </strong>
+            </div>
+
+            <div>
+              <span class="text-[10px] font-bold uppercase
+                           tracking-wider text-slate-400">
+                Location
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Sharjah
+              </strong>
+            </div>
+
+          </div>
+
+          <div class="mt-5 border-t border-slate-100 pt-4">
+
+            <span class="text-[10px] font-bold uppercase
+                         tracking-wider text-[#E51B23]">
+              Scope of Work
+            </span>
+
+            <p class="mt-1 text-sm leading-6 text-slate-500">
+              Light Replacement, Electrical & HVAC Works
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           PROJECT 02
+      ====================================================== -->
+
+      <div class="group overflow-hidden rounded-[1.75rem]
+                  border border-slate-200 bg-white
+                  shadow-[0_15px_45px_rgba(11,42,99,.08)]
+                  transition duration-500 hover:-translate-y-2
+                  hover:shadow-[0_25px_65px_rgba(11,42,99,.16)]">
+
+        <div class="relative h-56 overflow-hidden">
+
+          <img
+            src="project18.jpg"
+            alt="ENS School Ras Al Khaimah"
+            class="h-full w-full object-cover transition duration-700
+                   group-hover:scale-110">
+
+          <div class="absolute inset-0 bg-gradient-to-t
+                      from-[#071D47]/80 via-transparent to-transparent"></div>
+
+          <span class="absolute left-4 top-4 rounded-full
+                       bg-[#0B2A63] px-3 py-1.5 text-[10px]
+                       font-bold uppercase tracking-wider text-white">
+            Electrical · HVAC
+          </span>
+
+          <span class="absolute bottom-4 right-4 flex h-9 w-9
+                       items-center justify-center rounded-full
+                       bg-white/90 text-sm font-black text-[#0B2A63]">
+            02
+          </span>
+
+        </div>
+
+        <div class="p-6">
+
+          <h3 class="text-xl font-black text-[#0B2A63]">
+            ENS School
+          </h3>
+
+          <div class="mt-5 grid grid-cols-2 gap-4">
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Client
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Enige Solutions
+              </strong>
+            </div>
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Location
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Ras Al Khaimah
+              </strong>
+            </div>
+
+          </div>
+
+          <div class="mt-5 border-t border-slate-100 pt-4">
+
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#E51B23]">
+              Scope of Work
+            </span>
+
+            <p class="mt-1 text-sm leading-6 text-slate-500">
+              Light Replacement, Electrical & HVAC Works
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           PROJECT 03
+      ====================================================== -->
+
+      <div class="group overflow-hidden rounded-[1.75rem]
+                  border border-slate-200 bg-white shadow-[0_15px_45px_rgba(11,42,99,.08)]
+                  transition duration-500 hover:-translate-y-2
+                  hover:shadow-[0_25px_65px_rgba(11,42,99,.16)]">
+
+        <div class="relative h-56 overflow-hidden">
+
+          <img
+            src="projects2.jpg"
+            alt="Mosque Project Phase II"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#071D47]/80 via-transparent to-transparent"></div>
+
+          <span class="absolute left-4 top-4 rounded-full
+                       bg-[#E51B23] px-3 py-1.5 text-[10px]
+                       font-bold uppercase tracking-wider text-white">
+            Security Systems
+          </span>
+
+          <span class="absolute bottom-4 right-4 flex h-9 w-9 items-center
+                       justify-center rounded-full bg-white/90 text-sm
+                       font-black text-[#0B2A63]">
+            03
+          </span>
+
+        </div>
+
+        <div class="p-6">
+
+          <h3 class="text-xl font-black text-[#0B2A63]">
+            Mosque Project – Phase II
+          </h3>
+
+          <div class="mt-5 grid grid-cols-2 gap-4">
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Client
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Secure Tech
+              </strong>
+            </div>
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Location
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Al Dafra Region
+              </strong>
+            </div>
+
+          </div>
+
+          <div class="mt-5 border-t border-slate-100 pt-4">
+
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#E51B23]">
+              Scope of Work
+            </span>
+
+            <p class="mt-1 text-sm leading-6 text-slate-500">
+              CCTV Camera Installation
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           PROJECT 04
+      ====================================================== -->
+
+      <div class="group overflow-hidden rounded-[1.75rem]
+                  border border-slate-200 bg-white shadow-[0_15px_45px_rgba(11,42,99,.08)]
+                  transition duration-500 hover:-translate-y-2
+                  hover:shadow-[0_25px_65px_rgba(11,42,99,.16)]">
+
+        <div class="relative h-56 overflow-hidden">
+
+          <img
+            src="projects3.jpg"
+            alt="Airport CCTV Project Abu Dhabi"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#071D47]/80 via-transparent to-transparent"></div>
+
+          <span class="absolute left-4 top-4 rounded-full
+                       bg-[#0B2A63] px-3 py-1.5 text-[10px]
+                       font-bold uppercase tracking-wider text-white">
+            CCTV · Surveillance
+          </span>
+
+          <span class="absolute bottom-4 right-4 flex h-9 w-9 items-center
+                       justify-center rounded-full bg-white/90 text-sm font-black text-[#0B2A63]">
+            04
+          </span>
+
+        </div>
+
+        <div class="p-6">
+
+          <h3 class="text-xl font-black text-[#0B2A63]">
+            Airport Project
+          </h3>
+
+          <div class="mt-5 grid grid-cols-2 gap-4">
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Client
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Cofely Basic
+              </strong>
+            </div>
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Location
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Abu Dhabi
+              </strong>
+            </div>
+
+          </div>
+
+          <div class="mt-5 border-t border-slate-100 pt-4">
+
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#E51B23]">
+              Scope of Work
+            </span>
+
+            <p class="mt-1 text-sm leading-6 text-slate-500">
+              CCTV and Surveillance
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           PROJECT 05
+      ====================================================== -->
+
+      <div class="group overflow-hidden rounded-[1.75rem]
+                  border border-slate-200 bg-white shadow-[0_15px_45px_rgba(11,42,99,.08)]
+                  transition duration-500 hover:-translate-y-2
+                  hover:shadow-[0_25px_65px_rgba(11,42,99,.16)]">
+
+        <div class="relative h-56 overflow-hidden">
+
+          <img
+            src="projects4.jpg"
+            alt="Rakaz Electrical Project"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#071D47]/80 via-transparent to-transparent"></div>
+
+          <span class="absolute left-4 top-4 rounded-full bg-[#0B2A63]
+                       px-3 py-1.5 text-[10px] font-bold uppercase
+                       tracking-wider text-white">
+            Electrical
+          </span>
+
+          <span class="absolute bottom-4 right-4 flex h-9 w-9 items-center
+                       justify-center rounded-full bg-white/90 text-sm
+                       font-black text-[#0B2A63]">
+            05
+          </span>
+
+        </div>
+
+        <div class="p-6">
+
+          <h3 class="text-xl font-black text-[#0B2A63]">
+            Rakaz
+          </h3>
+
+          <div class="mt-5 grid grid-cols-2 gap-4">
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Client
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                RAK Smart4Power Solutions
+              </strong>
+            </div>
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Location
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Ras Al Khaimah
+              </strong>
+            </div>
+
+          </div>
+
+          <div class="mt-5 border-t border-slate-100 pt-4">
+
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#E51B23]">
+              Scope of Work
+            </span>
+
+            <p class="mt-1 text-sm leading-6 text-slate-500">
+              Light Replacement & Cable Tray Installation
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           PROJECT 06
+      ====================================================== -->
+
+      <div class="group overflow-hidden rounded-[1.75rem]
+                  border border-slate-200 bg-white shadow-[0_15px_45px_rgba(11,42,99,.08)]
+                  transition duration-500 hover:-translate-y-2
+                  hover:shadow-[0_25px_65px_rgba(11,42,99,.16)]">
+
+        <div class="relative h-56 overflow-hidden">
+
+          <img
+            src="projects5.jpg"
+            alt="Reem Mall CCTV Project"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#071D47]/80 via-transparent to-transparent"></div>
+
+          <span class="absolute left-4 top-4 rounded-full bg-[#E51B23]
+                       px-3 py-1.5 text-[10px] font-bold uppercase
+                       tracking-wider text-white">
+            CCTV · Cabling
+          </span>
+
+          <span class="absolute bottom-4 right-4 flex h-9 w-9 items-center
+                       justify-center rounded-full bg-white/90 text-sm
+                       font-black text-[#0B2A63]">
+            06
+          </span>
+
+        </div>
+
+        <div class="p-6">
+
+          <h3 class="text-xl font-black text-[#0B2A63]">
+            Reem Mall
+          </h3>
+
+          <div class="mt-5 grid grid-cols-2 gap-4">
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Client
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Royal Technology Solution LLC
+              </strong>
+            </div>
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Location
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Abu Dhabi
+              </strong>
+            </div>
+
+          </div>
+
+          <div class="mt-5 border-t border-slate-100 pt-4">
+
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#E51B23]">
+              Scope of Work
+            </span>
+
+            <p class="mt-1 text-sm leading-6 text-slate-500">
+              CCTV and Surveillance, Cable Dressing
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           PROJECT 07
+      ====================================================== -->
+
+      <div class="group overflow-hidden rounded-[1.75rem]
+                  border border-slate-200 bg-white shadow-[0_15px_45px_rgba(11,42,99,.08)]
+                  transition duration-500 hover:-translate-y-2">
+
+        <div class="relative h-56 overflow-hidden">
+
+          <img
+            src="projects6.jpg"
+            alt="Expo 2020 Smart World Project"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#071D47]/80 via-transparent to-transparent"></div>
+
+          <span class="absolute left-4 top-4 rounded-full bg-[#E51B23]
+                       px-3 py-1.5 text-[10px] font-bold uppercase
+                       tracking-wider text-white">
+            Skilled Manpower
+          </span>
+
+          <span class="absolute bottom-4 right-4 flex h-9 w-9 items-center
+                       justify-center rounded-full bg-white/90 text-sm font-black text-[#0B2A63]">
+            07
+          </span>
+
+        </div>
+
+        <div class="p-6">
+
+          <h3 class="text-xl font-black text-[#0B2A63]">
+            Expo 2020
+          </h3>
+
+          <div class="mt-5 grid grid-cols-2 gap-4">
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Client
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Smart World
+              </strong>
+            </div>
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Location
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Dubai
+              </strong>
+            </div>
+
+          </div>
+
+          <div class="mt-5 border-t border-slate-100 pt-4">
+
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#E51B23]">
+              Scope of Work
+            </span>
+
+            <p class="mt-1 text-sm leading-6 text-slate-500">
+              Supply of Skilled Manpower with Networking Engineer
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           PROJECT 08
+      ====================================================== -->
+
+      <div class="group overflow-hidden rounded-[1.75rem]
+                  border border-slate-200 bg-white shadow-[0_15px_45px_rgba(11,42,99,.08)]
+                  transition duration-500 hover:-translate-y-2">
+
+        <div class="relative h-56 overflow-hidden">
+
+          <img
+            src="project7.jpg"
+            alt="Commercial Residential Building HVAC"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#071D47]/80 via-transparent to-transparent"></div>
+
+          <span class="absolute left-4 top-4 rounded-full bg-[#0B2A63]
+                       px-3 py-1.5 text-[10px] font-bold uppercase
+                       tracking-wider text-white">
+            HVAC
+          </span>
+
+          <span class="absolute bottom-4 right-4 flex h-9 w-9 items-center
+                       justify-center rounded-full bg-white/90 text-sm font-black text-[#0B2A63]">
+            08
+          </span>
+
+        </div>
+
+        <div class="p-6">
+
+          <h3 class="text-xl font-black text-[#0B2A63]">
+            Commercial & Residential Building
+          </h3>
+
+          <div class="mt-5 grid grid-cols-2 gap-4">
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Client
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                I Zone Electromechanical Contractors LLC
+              </strong>
+            </div>
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Location
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Abu Dhabi
+              </strong>
+            </div>
+
+          </div>
+
+          <div class="mt-5 border-t border-slate-100 pt-4">
+
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#E51B23]">
+              Scope of Work
+            </span>
+
+            <p class="mt-1 text-sm leading-6 text-slate-500">
+              Supply & Installation of HVAC Works
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           PROJECT 09
+      ====================================================== -->
+
+      <div class="group overflow-hidden rounded-[1.75rem]
+                  border border-slate-200 bg-white shadow-[0_15px_45px_rgba(11,42,99,.08)]
+                  transition duration-500 hover:-translate-y-2">
+
+        <div class="relative h-56 overflow-hidden">
+
+          <img
+            src="projects6.jpg"
+            alt="Expo 2020 Fire Fighting Project"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#071D47]/80 via-transparent to-transparent"></div>
+
+          <span class="absolute left-4 top-4 rounded-full bg-[#E51B23]
+                       px-3 py-1.5 text-[10px] font-bold uppercase
+                       tracking-wider text-white">
+            Fire Fighting
+          </span>
+
+          <span class="absolute bottom-4 right-4 flex h-9 w-9 items-center
+                       justify-center rounded-full bg-white/90 text-sm font-black text-[#0B2A63]">
+            09
+          </span>
+
+        </div>
+
+        <div class="p-6">
+
+          <h3 class="text-xl font-black text-[#0B2A63]">
+            Expo 2020
+          </h3>
+
+          <div class="mt-5 grid grid-cols-2 gap-4">
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Client
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                ASGC
+              </strong>
+            </div>
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Location
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Dubai
+              </strong>
+            </div>
+
+          </div>
+
+          <div class="mt-5 border-t border-slate-100 pt-4">
+
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#E51B23]">
+              Scope of Work
+            </span>
+
+            <p class="mt-1 text-sm leading-6 text-slate-500">
+              Supply of Skilled Fire Fighting Manpower
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           PROJECT 10
+      ====================================================== -->
+
+      <div class="group overflow-hidden rounded-[1.75rem]
+                  border border-slate-200 bg-white shadow-[0_15px_45px_rgba(11,42,99,.08)]
+                  transition duration-500 hover:-translate-y-2">
+
+        <div class="relative h-56 overflow-hidden">
+
+          <img
+            src="projects9.jpg"
+            alt="Leaders Fort Contracting Chilled Water Project"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#071D47]/80 via-transparent to-transparent"></div>
+
+          <span class="absolute left-4 top-4 rounded-full bg-[#0B2A63]
+                       px-3 py-1.5 text-[10px] font-bold uppercase
+                       tracking-wider text-white">
+            Chilled Water System
+          </span>
+
+          <span class="absolute bottom-4 right-4 flex h-9 w-9 items-center
+                       justify-center rounded-full bg-white/90 text-sm font-black text-[#0B2A63]">
+            10
+          </span>
+
+        </div>
+
+        <div class="p-6">
+
+          <h3 class="text-xl font-black text-[#0B2A63]">
+            Leaders Fort Contracting Project
+          </h3>
+
+          <div class="mt-5 grid grid-cols-2 gap-4">
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Client
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Leader Fort Contracting LLC
+              </strong>
+            </div>
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Location
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Muhaisnah, Dubai
+              </strong>
+            </div>
+
+          </div>
+
+          <div class="mt-5 border-t border-slate-100 pt-4">
+
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#E51B23]">
+              Scope of Work
+            </span>
+
+            <p class="mt-1 text-sm leading-6 text-slate-500">
+              Installation of Chilled Water System
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           PROJECT 11
+      ====================================================== -->
+
+      <div class="group overflow-hidden rounded-[1.75rem]
+                  border border-slate-200 bg-white shadow-[0_15px_45px_rgba(11,42,99,.08)]
+                  transition duration-500 hover:-translate-y-2">
+
+        <div class="relative h-56 overflow-hidden">
+
+          <img
+            src="projects10.jpg"
+            alt="ADNOC Petrol Station CCTV Project"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#071D47]/80 via-transparent to-transparent"></div>
+
+          <span class="absolute left-4 top-4 rounded-full bg-[#0B2A63]
+                       px-3 py-1.5 text-[10px] font-bold uppercase
+                       tracking-wider text-white">
+            CCTV · Security
+          </span>
+
+          <span class="absolute bottom-4 right-4 flex h-9 w-9 items-center
+                       justify-center rounded-full bg-white/90 text-sm font-black text-[#0B2A63]">
+            11
+          </span>
+
+        </div>
+
+        <div class="p-6">
+
+          <h3 class="text-xl font-black text-[#0B2A63]">
+            ADNOC Petrol Station
+          </h3>
+
+          <div class="mt-5 grid grid-cols-2 gap-4">
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Client
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Al Saher International
+              </strong>
+            </div>
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Location
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Fujairah, UAE
+              </strong>
+            </div>
+
+          </div>
+
+          <div class="mt-5 border-t border-slate-100 pt-4">
+
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#E51B23]">
+              Scope of Work
+            </span>
+
+            <p class="mt-1 text-sm leading-6 text-slate-500">
+              Installation of CCTV, Intercom & SOS
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           PROJECT 12
+      ====================================================== -->
+
+      <div class="group overflow-hidden rounded-[1.75rem]
+                  border border-slate-200 bg-white shadow-[0_15px_45px_rgba(11,42,99,.08)]
+                  transition duration-500 hover:-translate-y-2">
+
+        <div class="relative h-56 overflow-hidden">
+
+          <img
+            src="projects11.webp"
+            alt="Thermal Power Construction Fiber Project"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#071D47]/80 via-transparent to-transparent"></div>
+
+          <span class="absolute left-4 top-4 rounded-full bg-[#E51B23]
+                       px-3 py-1.5 text-[10px] font-bold uppercase
+                       tracking-wider text-white">
+            Fiber · Networking
+          </span>
+
+          <span class="absolute bottom-4 right-4 flex h-9 w-9 items-center
+                       justify-center rounded-full bg-white/90 text-sm font-black text-[#0B2A63]">
+            12
+          </span>
+
+        </div>
+
+        <div class="p-6">
+
+          <h3 class="text-xl font-black text-[#0B2A63]">
+            Thermal Power Construction
+          </h3>
+
+          <div class="mt-5 grid grid-cols-2 gap-4">
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Client
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                China Energy Engineering Group Zhejiang Thermal Power Construction Co. Ltd.
+              </strong>
+            </div>
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Location
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Shamkha, Baniyas, Abu Dhabi
+              </strong>
+            </div>
+
+          </div>
+
+          <div class="mt-5 border-t border-slate-100 pt-4">
+
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#E51B23]">
+              Scope of Work
+            </span>
+
+            <p class="mt-1 text-sm leading-6 text-slate-500">
+              Fiber Splicing with Termination & Labeling
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           PROJECT 13
+      ====================================================== -->
+
+      <div class="group overflow-hidden rounded-[1.75rem]
+                  border border-slate-200 bg-white shadow-[0_15px_45px_rgba(11,42,99,.08)]
+                  transition duration-500 hover:-translate-y-2">
+
+        <div class="relative h-56 overflow-hidden">
+
+          <img
+            src="projects12.webp"
+            alt="Modon Villa Data Intercom Project"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#071D47]/80 via-transparent to-transparent"></div>
+
+          <span class="absolute left-4 top-4 rounded-full bg-[#0B2A63]
+                       px-3 py-1.5 text-[10px] font-bold uppercase
+                       tracking-wider text-white">
+            Data · Intercom
+          </span>
+
+          <span class="absolute bottom-4 right-4 flex h-9 w-9 items-center
+                       justify-center rounded-full bg-white/90 text-sm font-black text-[#0B2A63]">
+            13
+          </span>
+
+        </div>
+
+        <div class="p-6">
+
+          <h3 class="text-xl font-black text-[#0B2A63]">
+            Modon Villa
+          </h3>
+
+          <div class="mt-5 grid grid-cols-2 gap-4">
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Client
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Metallic Equipment Technologies Est.
+              </strong>
+            </div>
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Location
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Shamkha, Baniyas, Abu Dhabi
+              </strong>
+            </div>
+
+          </div>
+
+          <div class="mt-5 border-t border-slate-100 pt-4">
+
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#E51B23]">
+              Scope of Work
+            </span>
+
+            <p class="mt-1 text-sm leading-6 text-slate-500">
+              Installation of Data & Intercom Point
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           PROJECT 14
+      ====================================================== -->
+
+      <div class="group overflow-hidden rounded-[1.75rem]
+                  border border-slate-200 bg-white shadow-[0_15px_45px_rgba(11,42,99,.08)]
+                  transition duration-500 hover:-translate-y-2">
+
+        <div class="relative h-56 overflow-hidden">
+
+          <img
+            src="projects13.jpg"
+            alt="Porta Cabin Abu Dhabi Project"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#071D47]/80 via-transparent to-transparent"></div>
+
+          <span class="absolute left-4 top-4 rounded-full bg-[#E51B23]
+                       px-3 py-1.5 text-[10px] font-bold uppercase
+                       tracking-wider text-white">
+            Porta Cabin
+          </span>
+
+          <span class="absolute bottom-4 right-4 flex h-9 w-9 items-center
+                       justify-center rounded-full bg-white/90 text-sm font-black text-[#0B2A63]">
+            14
+          </span>
+
+        </div>
+
+        <div class="p-6">
+
+          <h3 class="text-xl font-black text-[#0B2A63]">
+            Porta Cabin Work
+          </h3>
+
+          <div class="mt-5 grid grid-cols-2 gap-4">
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Client
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                China Petroleum & Construction Corporation
+              </strong>
+            </div>
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Location
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Al Reem, Abu Dhabi
+              </strong>
+            </div>
+
+          </div>
+
+          <div class="mt-5 border-t border-slate-100 pt-4">
+
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#E51B23]">
+              Scope of Work
+            </span>
+
+            <p class="mt-1 text-sm leading-6 text-slate-500">
+              Supply and Installation of Porta Cabin
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           PROJECT 15
+      ====================================================== -->
+
+      <div class="group overflow-hidden rounded-[1.75rem]
+                  border border-slate-200 bg-white shadow-[0_15px_45px_rgba(11,42,99,.08)]
+                  transition duration-500 hover:-translate-y-2">
+
+        <div class="relative h-56 overflow-hidden">
+
+          <img
+            src="projects14.jpg"
+            alt="Lunday Shop Interior Design"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#071D47]/80 via-transparent to-transparent"></div>
+
+          <span class="absolute left-4 top-4 rounded-full bg-[#0B2A63]
+                       px-3 py-1.5 text-[10px] font-bold uppercase
+                       tracking-wider text-white">
+            Interior Design
+          </span>
+
+          <span class="absolute bottom-4 right-4 flex h-9 w-9 items-center
+                       justify-center rounded-full bg-white/90 text-sm font-black text-[#0B2A63]">
+            15
+          </span>
+
+        </div>
+
+        <div class="p-6">
+
+          <h3 class="text-xl font-black text-[#0B2A63]">
+            Lunday Shop Interior Design
+          </h3>
+
+          <div class="mt-5 grid grid-cols-2 gap-4">
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Client
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Smart Circuit Technology Solutions LLC
+              </strong>
+            </div>
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Location
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Al Dafra Region
+              </strong>
+            </div>
+
+          </div>
+
+          <div class="mt-5 border-t border-slate-100 pt-4">
+
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#E51B23]">
+              Scope of Work
+            </span>
+
+            <p class="mt-1 text-sm leading-6 text-slate-500">
+              Supply & Installation of Interior Work and Consultation
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           PROJECT 16
+      ====================================================== -->
+
+      <div class="group overflow-hidden rounded-[1.75rem]
+                  border border-slate-200 bg-white shadow-[0_15px_45px_rgba(11,42,99,.08)]
+                  transition duration-500 hover:-translate-y-2">
+
+        <div class="relative h-56 overflow-hidden">
+
+          <img
+            src="projects15.jpg"
+            alt="Coffee Shop Interior Design"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#071D47]/80 via-transparent to-transparent"></div>
+
+          <span class="absolute left-4 top-4 rounded-full bg-[#E51B23]
+                       px-3 py-1.5 text-[10px] font-bold uppercase
+                       tracking-wider text-white">
+            Interior · Fit-Out
+          </span>
+
+          <span class="absolute bottom-4 right-4 flex h-9 w-9 items-center
+                       justify-center rounded-full bg-white/90 text-sm font-black text-[#0B2A63]">
+            16
+          </span>
+
+        </div>
+
+        <div class="p-6">
+
+          <h3 class="text-xl font-black text-[#0B2A63]">
+            Coffee Shop Interior Design
+          </h3>
+
+          <div class="mt-5 grid grid-cols-2 gap-4">
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Client
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Golden Falcon Interior & Decoration
+              </strong>
+            </div>
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Location
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Nad Al Sheba Mall
+              </strong>
+            </div>
+
+          </div>
+
+          <div class="mt-5 border-t border-slate-100 pt-4">
+
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#E51B23]">
+              Scope of Work
+            </span>
+
+            <p class="mt-1 text-sm leading-6 text-slate-500">
+              Wall Partitions, Finishes & False Ceilings
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           PROJECT 17
+      ====================================================== -->
+
+      <div class="group overflow-hidden rounded-[1.75rem]
+                  border border-slate-200 bg-white shadow-[0_15px_45px_rgba(11,42,99,.08)]
+                  transition duration-500 hover:-translate-y-2">
+
+        <div class="relative h-56 overflow-hidden">
+
+          <img
+            src="projects16.jpg"
+            alt="Khawaneej Villa Interior Fit-Out"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#071D47]/80 via-transparent to-transparent"></div>
+
+          <span class="absolute left-4 top-4 rounded-full bg-[#0B2A63]
+                       px-3 py-1.5 text-[10px] font-bold uppercase
+                       tracking-wider text-white">
+            Interior Fit-Out
+          </span>
+
+          <span class="absolute bottom-4 right-4 flex h-9 w-9 items-center
+                       justify-center rounded-full bg-white/90 text-sm font-black text-[#0B2A63]">
+            17
+          </span>
+
+        </div>
+
+        <div class="p-6">
+
+          <h3 class="text-xl font-black text-[#0B2A63]">
+            Khawaneej Villa Interior Fit-Out
+          </h3>
+
+          <div class="mt-5 grid grid-cols-2 gap-4">
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Client
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Naam Creation
+              </strong>
+            </div>
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Location
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Khawaneej
+              </strong>
+            </div>
+
+          </div>
+
+          <div class="mt-5 border-t border-slate-100 pt-4">
+
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#E51B23]">
+              Scope of Work
+            </span>
+
+            <p class="mt-1 text-sm leading-6 text-slate-500">
+              Interior and Fit-Out Work
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           PROJECT 18
+      ====================================================== -->
+
+      <div class="group overflow-hidden rounded-[1.75rem]
+                  border border-slate-200 bg-white shadow-[0_15px_45px_rgba(11,42,99,.08)]
+                  transition duration-500 hover:-translate-y-2">
+
+        <div class="relative h-56 overflow-hidden">
+
+          <img
+            src="projects17.jpg"
+            alt="Shore End Landing Kalba Marine Cable Project"
+            class="h-full w-full object-cover transition duration-700 group-hover:scale-110">
+
+          <div class="absolute inset-0 bg-gradient-to-t from-[#071D47]/80 via-transparent to-transparent"></div>
+
+          <span class="absolute left-4 top-4 rounded-full bg-[#E51B23]
+                       px-3 py-1.5 text-[10px] font-bold uppercase
+                       tracking-wider text-white">
+            Marine · Cable Landing
+          </span>
+
+          <span class="absolute bottom-4 right-4 flex h-9 w-9 items-center
+                       justify-center rounded-full bg-white/90 text-sm font-black text-[#0B2A63]">
+            18
+          </span>
+
+        </div>
+
+        <div class="p-6">
+
+          <h3 class="text-xl font-black text-[#0B2A63]">
+            Shore End Landing at Kalba
+          </h3>
+
+          <div class="mt-5 grid grid-cols-2 gap-4">
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Client
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                ADSO LLC
+              </strong>
+            </div>
+
+            <div>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                Location
+              </span>
+
+              <strong class="mt-1 block text-sm text-slate-700">
+                Kalba
+              </strong>
+            </div>
+
+          </div>
+
+          <div class="mt-5 border-t border-slate-100 pt-4">
+
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#E51B23]">
+              Scope of Work
+            </span>
+
+            <p class="mt-1 text-sm leading-6 text-slate-500">
+              Excavation and Cable Laying Project
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROJECTS STYLES
+========================================================= -->
+
+<style>
+
+  /* ================= PROJECT CARD ================= */
+
+  .project-card {
+
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid #E2E8F0;
+    border-radius: 1.75rem;
+
+    background: #ffffff;
+
+    padding: 1.6rem;
+
+    box-shadow:
+      0 8px 30px rgba(11, 42, 99, .045);
+
+    transition:
+      transform .4s ease,
+      box-shadow .4s ease,
+      border-color .4s ease;
+  }
+
+
+  .project-card:hover {
+
+    transform: translateY(-7px);
+
+    border-color: rgba(11, 42, 99, .15);
+
+    box-shadow:
+      0 25px 55px rgba(11, 42, 99, .11);
+  }
+
+
+  /* ================= NUMBER ================= */
+
+  .project-number {
+
+    position: absolute;
+
+    right: 1.35rem;
+    top: 1.35rem;
+
+    display: flex;
+
+    height: 34px;
+    width: 34px;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 999px;
+
+    background: #F1F5F9;
+
+    color: #94A3B8;
+
+    font-size: 10px;
+    font-weight: 900;
+
+    transition: all .35s ease;
+  }
+
+
+  .project-card:hover .project-number {
+
+    background: #E51B23;
+    color: white;
+  }
+
+
+  /* ================= ICON ================= */
+
+  .project-icon {
+
+    display: flex;
+
+    height: 54px;
+    width: 54px;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    color: white;
+
+    transition:
+      transform .4s ease,
+      border-radius .4s ease;
+  }
+
+
+  .project-icon.navy {
+    background: #0B2A63;
+  }
+
+
+  .project-icon.red {
+    background: #E51B23;
+  }
+
+
+  .project-icon svg {
+
+    height: 25px;
+    width: 25px;
+  }
+
+
+  .project-card:hover .project-icon {
+
+    transform: scale(1.08) rotate(-3deg);
+
+    border-radius: 18px;
+  }
+
+
+  /* ================= CATEGORY ================= */
+
+  .project-category {
+
+    display: inline-block;
+
+    margin-top: 1.35rem;
+
+    border-radius: 999px;
+
+    background: #F1F5F9;
+
+    padding: 6px 10px;
+
+    color: #64748B;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: .12em;
+  }
+
+
+  /* ================= TITLE ================= */
+
+  .project-title {
+
+    margin-top: .75rem;
+
+    padding-right: 2.5rem;
+
+    color: #0B2A63;
+
+    font-size: 19px;
+
+    font-weight: 900;
+
+    line-height: 1.35;
+  }
+
+
+  /* ================= META ================= */
+
+  .project-meta {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 1rem;
+
+    margin-top: 1.3rem;
+
+    padding-top: 1.2rem;
+
+    border-top: 1px solid #E2E8F0;
+  }
+
+
+  .project-meta span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #94A3B8;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: .12em;
+  }
+
+
+  .project-meta strong {
+
+    display: block;
+
+    color: #334155;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+  }
+
+
+  /* ================= SCOPE ================= */
+
+  .project-scope {
+
+    margin-top: 1rem;
+
+    border-radius: 14px;
+
+    background: #F8FAFC;
+
+    padding: .9rem;
+
+    color: #475569;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    transition:
+      background .35s ease,
+      color .35s ease;
+  }
+
+
+  .project-scope span {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #E51B23;
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: .12em;
+  }
+
+
+  .project-card:hover .project-scope {
+
+    background: #F1F5F9;
+
+    color: #0B2A63;
+  }
+
+
+  /* ================= MOBILE ================= */
+
+  @media (max-width: 640px) {
+
+    .project-card {
+
+      padding: 1.35rem;
+
+      border-radius: 1.5rem;
+    }
+
+
+    .project-title {
+
+      font-size: 17px;
+    }
+
+
+    .project-meta {
+
+      gap: .75rem;
+    }
+
+
+    .project-meta strong {
+
+      font-size: 10.5px;
+    }
+
+
+    .project-scope {
+
+      font-size: 10.5px;
+    }
+
+  }
+
+</style>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+<!-- ================= RAN INNOVATIONS FOOTER ================= -->
+<footer class="relative overflow-hidden bg-[#071D47] text-white">
+
+  <!-- Background Glow -->
+  <div class="pointer-events-none absolute -right-40 -top-40 h-[450px] w-[450px]
+              rounded-full bg-[#E51B23]/10 blur-3xl"></div>
+
+  <div class="pointer-events-none absolute -left-40 bottom-0 h-[400px] w-[400px]
+              rounded-full bg-blue-400/10 blur-3xl"></div>
+
+
+  <!-- ================= MAIN FOOTER ================= -->
+  <div class="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10 lg:py-20">
+
+    <div class="grid gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1.2fr] lg:gap-10">
+
+
+      <!-- ================= COMPANY ================= -->
+      <div>
+
+     
+
+        <p class="mt-6 max-w-sm text-sm leading-7 text-blue-100/65">
+          Empowering ideas. Engineering the future. RAN Contracting delivers
+          smart, sustainable, and reliable solutions designed to transform
+          spaces, businesses, and everyday experiences.
+        </p>
+
+
+    
+
+      </div>
+
+
+      <!-- ================= QUICK LINKS ================= -->
+      <div>
+
+        <h3 class="text-lg font-black text-white">
+          Quick Links
+        </h3>
+
+        <div class="mt-5 h-1 w-10 rounded-full bg-[#E51B23]"></div>
+
+        <ul class="mt-6 space-y-4">
+
+          <li>
+            <a href="index.html"
+               class="group flex items-center gap-2 text-sm
+                      text-blue-100/65 transition hover:text-white">
+              <span class="text-[#E51B23] transition group-hover:translate-x-1">
+                →
+              </span>
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="about.html"
+               class="group flex items-center gap-2 text-sm
+                      text-blue-100/65 transition hover:text-white">
+              <span class="text-[#E51B23] transition group-hover:translate-x-1">
+                →
+              </span>
+              About Us
+            </a>
+          </li>
+
+          <li>
+            <a href="services.html"
+               class="group flex items-center gap-2 text-sm
+                      text-blue-100/65 transition hover:text-white">
+              <span class="text-[#E51B23] transition group-hover:translate-x-1">
+                →
+              </span>
+              Our Services
+            </a>
+          </li>
+
+          <li>
+            <a href="projects.html"
+               class="group flex items-center gap-2 text-sm
+                      text-blue-100/65 transition hover:text-white">
+              <span class="text-[#E51B23] transition group-hover:translate-x-1">
+                →
+              </span>
+              Projects
+            </a>
+          </li>
+
+          
+
+          <li>
+            <a href="contact.html"
+               class="group flex items-center gap-2 text-sm
+                      text-blue-100/65 transition hover:text-white">
+              <span class="text-[#E51B23] transition group-hover:translate-x-1">
+                →
+              </span>
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- ================= SOLUTIONS ================= -->
+      <div>
+
+        <h3 class="text-lg font-black text-white">
+          Our Services
+        </h3>
+
+        <div class="mt-5 h-1 w-10 rounded-full bg-[#E51B23]"></div>
+
+        <ul class="mt-6 space-y-4">
+
+          <li>
+            <a href="services.html"
+               class="group flex items-center gap-2 text-sm
+                      text-blue-100/65 transition hover:text-white">
+              <span class="text-[#E51B23] transition group-hover:translate-x-1">
+                →
+              </span>
+              Civil Construction Specialization 
+            </a>
+          </li>
+
+          <li>
+            <a href="services.html"
+               class="group flex items-center gap-2 text-sm
+                      text-blue-100/65 transition hover:text-white">
+              <span class="text-[#E51B23] transition group-hover:translate-x-1">
+                →
+              </span>
+              Mechanical Specialization 
+            </a>
+          </li>
+
+
+          <li>
+            <a href="services.html"
+               class="group flex items-center gap-2 text-sm
+                      text-blue-100/65 transition hover:text-white">
+              <span class="text-[#E51B23] transition group-hover:translate-x-1">
+                →
+              </span>
+              Plumbing Services Specialization  
+            </a>
+          </li>
+
+        
+
+        </ul>
+
+      </div>
+
+
+      <!-- ================= CONTACT ================= -->
+      <div>
+
+        <h3 class="text-lg font-black text-white">
+          Get In Touch
+        </h3>
+
+        <div class="mt-5 h-1 w-10 rounded-full bg-[#E51B23]"></div>
+
+
+        <div class="mt-6 space-y-5">
+
+
+          <!-- Location -->
+          <div class="flex items-start gap-4">
+
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center
+                        rounded-xl bg-white/5 text-[#E51B23]">
+              📍
+            </div>
+
+            <div>
+              <p class="text-xs font-bold uppercase tracking-wider
+                        text-blue-100/40">
+                Location
+              </p>
+
+              <p class="mt-1 text-sm leading-6 text-blue-100/70">
+                United Arab Emirates
+              </p>
+            </div>
+
+          </div>
+
+
+          <!-- Phone -->
+          <div class="flex items-start gap-4">
+
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center
+                        rounded-xl bg-white/5 text-[#E51B23]">
+              ☎
+            </div>
+
+            <div>
+              <p class="text-xs font-bold uppercase tracking-wider
+                        text-blue-100/40">
+                Phone
+              </p>
+
+              <a href="tel:+971567116993"
+                 class="mt-1 block text-sm text-blue-100/70
+                        transition hover:text-white">
+                +971567116993
+              </a>
+            </div>
+
+          </div>
+
+
+          <!-- Email -->
+          <div class="flex items-start gap-4">
+
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center
+                        rounded-xl bg-white/5 text-[#E51B23]">
+              ✉
+            </div>
+
+            <div>
+              <p class="text-xs font-bold uppercase tracking-wider
+                        text-blue-100/40">
+                Email
+              </p>
+
+              <a href="mailto:admin@rancontracting.com "
+                 class="mt-1 block break-all text-sm text-blue-100/70
+                        transition hover:text-white">
+                admin@rancontracting.com 
+              </a>
+            </div>
+
+          </div>
+
+
+          <!-- CTA -->
+          <a href="tel:+971567116993"
+             class="group mt-2 inline-flex items-center gap-3 rounded-full
+                    bg-[#E51B23] px-6 py-3 text-sm font-bold text-white
+                    shadow-lg shadow-black/10 transition
+                    hover:-translate-y-1 hover:bg-[#C9151C]">
+
+            Let's Talk
+
+            <span class="transition group-hover:translate-x-1">
+              →
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  
+
+  </div>
+
+
+  <!-- ================= COPYRIGHT BAR ================= -->
+  <div class="border-t border-white/10">
+
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-6
+                text-center sm:px-8 md:flex-row md:items-center
+                md:justify-between md:text-left lg:px-10">
+
+      <p class="text-xs text-blue-100/45 sm:text-sm">
+        © 2026
+        <span class="font-semibold text-blue-100/70">
+          RAN Contracting
+        </span>.
+        All rights reserved.
+      </p>
+
+
+
+    </div>
+
+  </div>
+
+</footer>
+ <!-- Floating WhatsApp Button + Chat Box -->
+<div id="whatsapp-widget" class="fixed bottom-6 right-6 z-50">
+  
+  <!-- Chat Box -->
+  <div id="chat-box" class="hidden mb-3 w-72 bg-white shadow-xl rounded-2xl border border-gray-200 overflow-hidden transition-all duration-300">
+    <div class="bg-green-600 text-white p-4 flex items-center justify-between">
+      <div>
+        <h3 class="font-bold text-lg">WhatsApp Chat</h3>
+        <p class="text-sm text-white/80">Chat Support</p>
+      </div>
+      <button id="close-chat" class="text-white text-xl leading-none">&times;</button>
+    </div>
+
+    <div class="p-4 text-gray-700 text-sm">
+      👋 **Hello!**  
+      How can we help you today?
+    </div>
+
+    <div class="p-4 bg-gray-100">
+      <a href="https://wa.me/971543994914 " 
+         target="_blank"
+         class="w-full block text-center bg-green-600 text-white font-semibold py-2 rounded-xl shadow hover:bg-green-700 transition">
+        Start Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <button id="chat-btn"
+          class="bg-green-600 hover:bg-green-700 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center animate-bounce">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-8 h-8">
+  </button>
+</div>
+
+<script>
+  const chatBtn = document.getElementById("chat-btn");
+  const chatBox = document.getElementById("chat-box");
+  const closeChat = document.getElementById("close-chat");
+
+  chatBtn.addEventListener("click", () => {
+    chatBox.classList.toggle("hidden");
+  });
+
+  closeChat.addEventListener("click", () => {
+    chatBox.classList.add("hidden");
+  });
+</script>
+</body>
+</html>

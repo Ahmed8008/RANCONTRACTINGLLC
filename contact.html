@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAN Contracting</title>
+  <!-- Favicon -->
+<link rel="icon" type="image/png" href="logo.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#0B2A63',
+            brand2: '#173E7A',
+            accent: '#E51B23',
+            ink: '#102A56',
+            mist: '#F4F7FC'
+          },
+          boxShadow: {
+            glow: '0 20px 70px rgba(11, 42, 99, .14)'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="min-h-screen bg-mist text-ink antialiased">
+
+  <!-- Modern responsive header -->
+    <header class="fixed top-0 left-0 right-0 z-50 w-full border-b border-white/10 bg-white/90 backdrop-blur-xl shadow-sm">
+    <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand2/40 to-transparent"></div>
+
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-10"
+         aria-label="Main navigation">
+
+      <!-- Logo -->
+     <a href="#" class="group flex shrink-0 items-center" aria-label="RAN Innovations home">
+  <img 
+    src="Newistlogoo.png" 
+    alt="RAN Innovations" 
+    class="h-16 w-auto object-contain transition duration-300 
+           group-hover:scale-[1.02] 
+           sm:h-20 lg:h-24"
+  />
+</a>
+
+      <!-- Desktop navigation -->
+      <div class="hidden items-center gap-8 lg:flex">
+        <a href="index.html" class="relative text-sm font-semibold text-slate-700 transition hover:text-brand
+          after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-0 after:bg-accent
+          after:transition-all hover:after:w-full">Home</a>
+        <a href="about.html" class="relative text-sm font-semibold text-slate-700 transition hover:text-brand
+          after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-0 after:bg-accent
+          after:transition-all hover:after:w-full">About</a>
+        <a href="services.html" class="relative text-sm font-semibold text-slate-700 transition hover:text-brand
+          after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-0 after:bg-accent
+          after:transition-all hover:after:w-full">Services</a>
+        <a href="projects.html" class="relative text-sm font-semibold text-slate-700 transition hover:text-brand
+          after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-0 after:bg-accent
+          after:transition-all hover:after:w-full">Projects</a>
+        <a href="contact.html" class="relative text-sm font-semibold text-slate-700 transition hover:text-brand
+          after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-0 after:bg-accent
+          after:transition-all after:w-full">Contact</a>
+      </div>
+
+      <!-- CTA -->
+      <div class="hidden lg:block">
+        <a href="tel:+971567116993"
+           class="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-white
+                  shadow-lg shadow-brand/15 transition duration-300 hover:-translate-y-0.5
+                  hover:bg-brand2 hover:shadow-xl">
+          Let's Talk
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M4 10h11m0 0-4-4m4 4-4 4" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="menuBtn"
+              type="button"
+              class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200
+                     bg-white text-brand shadow-sm transition hover:bg-mist lg:hidden"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="mobileMenu">
+        <svg id="menuIcon" class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round"/>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu"
+         class="hidden border-t border-slate-200/80 bg-white/95 px-5 py-5 shadow-glow backdrop-blur-xl lg:hidden">
+      <div class="mx-auto max-w-7xl space-y-1">
+        <a href="index.html" class="block rounded-xl px-4 py-3 font-semibold text-slate-700 hover:bg-mist hover:text-brand">Home</a>
+        <a href="about.html" class="block rounded-xl px-4 py-3 font-semibold text-slate-700 hover:bg-mist hover:text-brand">About</a>
+        <a href="#services.html" class="block rounded-xl px-4 py-3 font-semibold text-slate-700 hover:bg-mist hover:text-brand">Services</a>
+        <a href="projects.html" class="block rounded-xl px-4 py-3 font-semibold text-slate-700 hover:bg-mist hover:text-brand">Projects</a>
+        <a href="contact.html" class="block rounded-xl px-4 py-3 font-semibold text-slate-700 hover:bg-mist hover:text-brand">Contact</a>
+        <a href="tel:+971567116993"
+           class="mt-3 flex items-center justify-center gap-2 rounded-xl bg-brand px-4 py-3 font-bold text-white
+                  transition hover:bg-brand2">
+          Let's Talk
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </header
+<!-- =========================================================
+     RAN INNOVATIONS — CONTACT SECTION
+========================================================= -->
+
+<section id="contact"
+         class="relative overflow-hidden bg-[#F5F8FC] py-20 sm:py-24 lg:py-28">
+
+  <!-- Background Decorations -->
+  <div class="pointer-events-none absolute -left-32 top-20 h-80 w-80
+              rounded-full bg-[#0B2A63]/5 blur-3xl"></div>
+
+  <div class="pointer-events-none absolute -right-32 bottom-10 h-80 w-80
+              rounded-full bg-[#E51B23]/5 blur-3xl"></div>
+
+
+  <div class="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <div class="mx-auto max-w-3xl text-center">
+
+    
+
+      <h2 class="mt-5 text-3xl font-black leading-tight
+                 text-[#0B2A63] sm:text-4xl lg:text-5xl">
+
+        Let's Build Something
+        <span class="text-[#E51B23]">Great Together</span>
+
+      </h2>
+
+
+      <p class="mx-auto mt-5 max-w-2xl text-sm leading-7
+                text-slate-500 sm:text-base">
+
+        Whether you are planning a new project, looking for technical
+        solutions, or simply want to learn more about RAN,
+        our team is ready to connect with you.
+
+      </p>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         COUNTRY SWITCH / LABELS
+    ====================================================== -->
+
+    <div class="mt-12 flex flex-wrap items-center justify-center gap-3">
+
+      <span class="inline-flex items-center gap-2 rounded-full
+                   bg-[#0B2A63] px-5 py-2.5 text-xs font-black
+                   text-white shadow-lg shadow-[#0B2A63]/10">
+
+        <span class="h-2 w-2 rounded-full bg-[#E51B23]"></span>
+
+        UAE
+
+      </span>
+
+
+      <span class="inline-flex items-center gap-2 rounded-full
+                   border border-slate-200 bg-white px-5 py-2.5
+                   text-xs font-black text-[#0B2A63]">
+
+        <span class="h-2 w-2 rounded-full bg-[#E51B23]"></span>
+
+        PAKISTAN
+
+      </span>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         MAIN GRID
+    ====================================================== -->
+
+    <div class="mt-10 grid gap-6 lg:grid-cols-[1.05fr_.95fr]">
+
+
+      <!-- ===================================================
+           LEFT — OFFICE INFORMATION
+      ==================================================== -->
+
+      <div class="rounded-[2rem] bg-[#0B2A63] p-6 shadow-2xl
+                  shadow-[#0B2A63]/10 sm:p-8 lg:p-10">
+
+        <div class="max-w-xl">
+
+          <span class="text-[10px] font-black uppercase
+                       tracking-[0.2em] text-[#E51B23]">
+
+            Contact Us
+
+          </span>
+
+
+          <h3 class="mt-3 text-2xl font-black text-white sm:text-3xl">
+
+            Our Offices
+
+          </h3>
+
+
+          <p class="mt-3 text-sm leading-7 text-blue-100/65">
+
+            Connect with our teams across the UAE and Pakistan.
+            We are always ready to discuss your requirements.
+
+          </p>
+
+
+          <!-- ================================================
+               DUBAI OFFICE
+          ================================================= -->
+
+          <div class="mt-8 rounded-2xl border border-white/10
+                      bg-white/[0.06] p-5 transition duration-300
+                      hover:bg-white/[0.10]">
+
+            <div class="flex items-start gap-4">
+
+              <div class="flex h-12 w-12 shrink-0 items-center
+                          justify-center rounded-xl bg-[#E51B23]
+                          text-white">
+
+                <!-- Location Icon -->
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none">
+
+                  <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"
+                        stroke="currentColor"
+                        stroke-width="1.8"/>
+
+                  <circle cx="12" cy="10" r="2.5"
+                          stroke="currentColor"
+                          stroke-width="1.8"/>
+
+                </svg>
+
+              </div>
+
+
+              <div>
+
+                <span class="text-[9px] font-black uppercase
+                             tracking-[0.18em] text-[#E51B23]">
+
+                  UAE
+
+                </span>
+
+                <h4 class="mt-1 text-lg font-black text-white">
+
+                  Head Office – Dubai UAE
+
+                </h4>
+
+                <p class="mt-2 text-sm leading-6 text-blue-100/65">
+
+                  Office G-74, Jebel Ali Industrial Area 1, Dubai, UAE
+
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <!-- Dubai Contact -->
+
+            <div class="mt-5 grid gap-3 border-t border-white/10
+                        pt-5 sm:grid-cols-2">
+
+              <a href="mailto:admin@rancontracting.com"
+                 class="flex items-center gap-3 text-sm text-blue-100
+                        transition hover:text-white">
+
+                <span class="text-[#E51B23]">✉</span>
+
+                admin@rancontracting.com
+
+              </a>
+
+
+              <a href="tel:+971567116993"
+                 class="flex items-center gap-3 text-sm text-blue-100
+                        transition hover:text-white">
+
+                <span class="text-[#E51B23]">☎</span>
+
+                +971 56 7116993
+
+              </a>
+
+
+              <a href="tel:+971507393390"
+                 class="flex items-center gap-3 text-sm text-blue-100
+                        transition hover:text-white">
+
+                <span class="text-[#E51B23]">☎</span>
+
+                +971 50 7393390
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- ================================================
+               PAKISTAN OFFICE
+          ================================================= -->
+
+          <div class="mt-4 rounded-2xl border border-white/10
+                      bg-white/[0.06] p-5 transition duration-300
+                      hover:bg-white/[0.10]">
+
+            <div class="flex items-start gap-4">
+
+              <div class="flex h-12 w-12 shrink-0 items-center
+                          justify-center rounded-xl bg-white
+                          text-[#0B2A63]">
+
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none">
+
+                  <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"
+                        stroke="currentColor"
+                        stroke-width="1.8"/>
+
+                  <circle cx="12" cy="10" r="2.5"
+                          stroke="currentColor"
+                          stroke-width="1.8"/>
+
+                </svg>
+
+              </div>
+
+
+              <div>
+
+                <span class="text-[9px] font-black uppercase
+                             tracking-[0.18em] text-[#E51B23]">
+
+                  Pakistan
+
+                </span>
+
+                <h4 class="mt-1 text-lg font-black text-white">
+
+                  Regional Office
+
+                </h4>
+
+                <p class="mt-2 text-sm leading-6 text-blue-100/65">
+
+                 New metro city sarai Alamgir b 10 plaza 2nd floor
+
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="mt-5 border-t border-white/10 pt-5">
+
+              <a href="tel:+923206080084"
+                 class="inline-flex items-center gap-3 text-sm
+                        text-blue-100 transition hover:text-white">
+
+                <span class="text-[#E51B23]">☎</span>
+
+                +92 320 6080084
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- Website -->
+
+          <a href="https://www.rancontractingllc.com"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="mt-5 flex items-center justify-between
+                    rounded-xl bg-[#E51B23] px-5 py-4
+                    text-sm font-bold text-white transition
+                    hover:bg-red-600">
+
+            <span>
+              www.rancontractingllc.com
+            </span>
+
+            <span class="text-lg">↗</span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ===================================================
+           RIGHT — CONTACT FORM
+      ==================================================== -->
+
+      <div class="rounded-[2rem] border border-slate-200
+                  bg-white p-6 shadow-xl shadow-[#0B2A63]/5
+                  sm:p-8 lg:p-10">
+
+        <div>
+
+          <span class="text-[10px] font-black uppercase
+                       tracking-[0.2em] text-[#E51B23]">
+
+            Start a Conversation
+
+          </span>
+
+
+          <h3 class="mt-3 text-2xl font-black text-[#0B2A63]
+                     sm:text-3xl">
+
+            Tell Us About Your Project
+
+          </h3>
+
+
+          <p class="mt-3 text-sm leading-7 text-slate-500">
+
+            Fill out the form and our team will get back to you
+            as soon as possible.
+
+          </p>
+
+        </div>
+
+
+        <form class="mt-8 space-y-5">
+
+
+          <!-- Name -->
+
+          <div>
+
+            <label class="mb-2 block text-xs font-bold
+                          text-[#0B2A63]">
+
+              Full Name
+
+            </label>
+
+            <input type="text"
+                   placeholder="Enter your name"
+                   class="w-full rounded-xl border border-slate-200
+                          bg-[#F8FAFC] px-4 py-3.5 text-sm
+                          outline-none transition
+                          placeholder:text-slate-400
+                          focus:border-[#0B2A63]
+                          focus:bg-white
+                          focus:ring-4
+                          focus:ring-[#0B2A63]/5">
+
+          </div>
+
+
+
+          <!-- Email + Phone -->
+
+          <div class="grid gap-5 sm:grid-cols-2">
+
+            <div>
+
+              <label class="mb-2 block text-xs font-bold
+                            text-[#0B2A63]">
+
+                Email Address
+
+              </label>
+
+              <input type="email"
+                     placeholder="you@example.com"
+                     class="w-full rounded-xl border border-slate-200
+                            bg-[#F8FAFC] px-4 py-3.5 text-sm
+                            outline-none transition
+                            placeholder:text-slate-400
+                            focus:border-[#0B2A63]
+                            focus:bg-white
+                            focus:ring-4
+                            focus:ring-[#0B2A63]/5">
+
+            </div>
+
+
+            <div>
+
+              <label class="mb-2 block text-xs font-bold
+                            text-[#0B2A63]">
+
+                Phone Number
+
+              </label>
+
+              <input type="tel"
+                     placeholder="+971 / +92"
+                     class="w-full rounded-xl border border-slate-200
+                            bg-[#F8FAFC] px-4 py-3.5 text-sm
+                            outline-none transition
+                            placeholder:text-slate-400
+                            focus:border-[#0B2A63]
+                            focus:bg-white
+                            focus:ring-4
+                            focus:ring-[#0B2A63]/5">
+
+            </div>
+
+          </div>
+
+
+
+          <!-- Service -->
+
+          <div>
+
+            <label class="mb-2 block text-xs font-bold
+                          text-[#0B2A63]">
+
+              Service Required
+
+            </label>
+
+            <select
+              class="w-full rounded-xl border border-slate-200
+                     bg-[#F8FAFC] px-4 py-3.5 text-sm
+                     text-slate-600 outline-none transition
+                     focus:border-[#0B2A63]
+                     focus:bg-white
+                     focus:ring-4
+                     focus:ring-[#0B2A63]/5">
+
+              <option>Select a service</option>
+
+              <option>General Contracting</option>
+              <option>MEP Services</option>
+              <option>Electrical Services</option>
+              <option>HVAC Solutions</option>
+              <option>Fire Fighting Systems</option>
+              <option>Civil Construction</option>
+              <option>Telecommunication</option>
+              <option>Equipment Rental</option>
+              <option>Other</option>
+
+            </select>
+
+          </div>
+
+
+
+          <!-- Message -->
+
+          <div>
+
+            <label class="mb-2 block text-xs font-bold
+                          text-[#0B2A63]">
+
+              Message
+
+            </label>
+
+            <textarea rows="5"
+                      placeholder="Tell us about your requirements..."
+                      class="w-full resize-none rounded-xl
+                             border border-slate-200
+                             bg-[#F8FAFC] px-4 py-3.5 text-sm
+                             outline-none transition
+                             placeholder:text-slate-400
+                             focus:border-[#0B2A63]
+                             focus:bg-white
+                             focus:ring-4
+                             focus:ring-[#0B2A63]/5"></textarea>
+
+          </div>
+
+
+
+          <!-- Submit -->
+
+          <button type="submit"
+                  class="group flex w-full items-center
+                         justify-center gap-3 rounded-xl
+                         bg-[#0B2A63] px-6 py-4
+                         text-sm font-black text-white
+                         shadow-lg shadow-[#0B2A63]/15
+                         transition-all duration-300
+                         hover:-translate-y-1
+                         hover:bg-[#E51B23]">
+
+            Send Your Message
+
+            <svg class="h-4 w-4 transition-transform
+                        group-hover:translate-x-1"
+                 viewBox="0 0 24 24"
+                 fill="none">
+
+              <path d="M5 12h14M13 6l6 6-6 6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+
+            </svg>
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FOLLOW US
+    ====================================================== -->
+
+    <div class="mt-8 rounded-[1.75rem] border border-slate-200
+                bg-white p-6 shadow-sm sm:flex sm:items-center
+                sm:justify-between sm:px-8">
+
+      <div>
+
+        <span class="text-[10px] font-black uppercase
+                     tracking-[0.18em] text-[#E51B23]">
+
+          Stay Connected
+
+        </span>
+
+        <h4 class="mt-1 text-lg font-black text-[#0B2A63]">
+
+          Follow Us for updates & projects
+
+        </h4>
+
+        <p class="mt-1 text-sm text-slate-500">
+
+          Follow RAN across UAE & Pakistan.
+
+        </p>
+
+      </div>
+
+
+      <!-- Social Buttons -->
+
+      <div class="mt-5 flex gap-3 sm:mt-0">
+
+        <a href="#"
+           aria-label="LinkedIn"
+           class="flex h-11 w-11 items-center justify-center
+                  rounded-full bg-[#0B2A63] text-sm font-black
+                  text-white transition hover:-translate-y-1
+                  hover:bg-[#E51B23]">
+
+          in
+
+        </a>
+
+
+        <a href="#"
+           aria-label="Facebook"
+           class="flex h-11 w-11 items-center justify-center
+                  rounded-full bg-[#0B2A63] text-sm font-black
+                  text-white transition hover:-translate-y-1
+                  hover:bg-[#E51B23]">
+
+          f
+
+        </a>
+
+
+        <a href="#"
+           aria-label="Instagram"
+           class="flex h-11 w-11 items-center justify-center
+                  rounded-full bg-[#0B2A63] text-sm font-black
+                  text-white transition hover:-translate-y-1
+                  hover:bg-[#E51B23]">
+
+          ◎
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+<!-- ================= RAN INNOVATIONS FOOTER ================= -->
+<footer class="relative overflow-hidden bg-[#071D47] text-white">
+
+  <!-- Background Glow -->
+  <div class="pointer-events-none absolute -right-40 -top-40 h-[450px] w-[450px]
+              rounded-full bg-[#E51B23]/10 blur-3xl"></div>
+
+  <div class="pointer-events-none absolute -left-40 bottom-0 h-[400px] w-[400px]
+              rounded-full bg-blue-400/10 blur-3xl"></div>
+
+
+  <!-- ================= MAIN FOOTER ================= -->
+  <div class="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10 lg:py-20">
+
+    <div class="grid gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1.2fr] lg:gap-10">
+
+
+      <!-- ================= COMPANY ================= -->
+      <div>
+
+     
+
+        <p class="mt-6 max-w-sm text-sm leading-7 text-blue-100/65">
+          Empowering ideas. Engineering the future. RAN Contracting delivers
+          smart, sustainable, and reliable solutions designed to transform
+          spaces, businesses, and everyday experiences.
+        </p>
+
+
+    
+
+      </div>
+
+
+      <!-- ================= QUICK LINKS ================= -->
+      <div>
+
+        <h3 class="text-lg font-black text-white">
+          Quick Links
+        </h3>
+
+        <div class="mt-5 h-1 w-10 rounded-full bg-[#E51B23]"></div>
+
+        <ul class="mt-6 space-y-4">
+
+          <li>
+            <a href="index.html"
+               class="group flex items-center gap-2 text-sm
+                      text-blue-100/65 transition hover:text-white">
+              <span class="text-[#E51B23] transition group-hover:translate-x-1">
+                →
+              </span>
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="about.html"
+               class="group flex items-center gap-2 text-sm
+                      text-blue-100/65 transition hover:text-white">
+              <span class="text-[#E51B23] transition group-hover:translate-x-1">
+                →
+              </span>
+              About Us
+            </a>
+          </li>
+
+          <li>
+            <a href="services.html"
+               class="group flex items-center gap-2 text-sm
+                      text-blue-100/65 transition hover:text-white">
+              <span class="text-[#E51B23] transition group-hover:translate-x-1">
+                →
+              </span>
+              Our Services
+            </a>
+          </li>
+
+          <li>
+            <a href="projects.html"
+               class="group flex items-center gap-2 text-sm
+                      text-blue-100/65 transition hover:text-white">
+              <span class="text-[#E51B23] transition group-hover:translate-x-1">
+                →
+              </span>
+              Projects
+            </a>
+          </li>
+
+          
+
+          <li>
+            <a href="contact.html"
+               class="group flex items-center gap-2 text-sm
+                      text-blue-100/65 transition hover:text-white">
+              <span class="text-[#E51B23] transition group-hover:translate-x-1">
+                →
+              </span>
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- ================= SOLUTIONS ================= -->
+      <div>
+
+        <h3 class="text-lg font-black text-white">
+          Our Services
+        </h3>
+
+        <div class="mt-5 h-1 w-10 rounded-full bg-[#E51B23]"></div>
+
+        <ul class="mt-6 space-y-4">
+
+          <li>
+            <a href="services.html"
+               class="group flex items-center gap-2 text-sm
+                      text-blue-100/65 transition hover:text-white">
+              <span class="text-[#E51B23] transition group-hover:translate-x-1">
+                →
+              </span>
+              Civil Construction Specialization 
+            </a>
+          </li>
+
+          <li>
+            <a href="services.html"
+               class="group flex items-center gap-2 text-sm
+                      text-blue-100/65 transition hover:text-white">
+              <span class="text-[#E51B23] transition group-hover:translate-x-1">
+                →
+              </span>
+              Mechanical Specialization 
+            </a>
+          </li>
+
+
+          <li>
+            <a href="services.html"
+               class="group flex items-center gap-2 text-sm
+                      text-blue-100/65 transition hover:text-white">
+              <span class="text-[#E51B23] transition group-hover:translate-x-1">
+                →
+              </span>
+              Plumbing Services Specialization  
+            </a>
+          </li>
+
+        
+
+        </ul>
+
+      </div>
+
+
+      <!-- ================= CONTACT ================= -->
+      <div>
+
+        <h3 class="text-lg font-black text-white">
+          Get In Touch
+        </h3>
+
+        <div class="mt-5 h-1 w-10 rounded-full bg-[#E51B23]"></div>
+
+
+        <div class="mt-6 space-y-5">
+
+
+          <!-- Location -->
+          <div class="flex items-start gap-4">
+
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center
+                        rounded-xl bg-white/5 text-[#E51B23]">
+              📍
+            </div>
+
+            <div>
+              <p class="text-xs font-bold uppercase tracking-wider
+                        text-blue-100/40">
+                Location
+              </p>
+
+              <p class="mt-1 text-sm leading-6 text-blue-100/70">
+                United Arab Emirates
+              </p>
+            </div>
+
+          </div>
+
+
+          <!-- Phone -->
+          <div class="flex items-start gap-4">
+
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center
+                        rounded-xl bg-white/5 text-[#E51B23]">
+              ☎
+            </div>
+
+            <div>
+              <p class="text-xs font-bold uppercase tracking-wider
+                        text-blue-100/40">
+                Phone
+              </p>
+
+              <a href="tel:+971567116993"
+                 class="mt-1 block text-sm text-blue-100/70
+                        transition hover:text-white">
+                +971567116993
+              </a>
+            </div>
+
+          </div>
+
+
+          <!-- Email -->
+          <div class="flex items-start gap-4">
+
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center
+                        rounded-xl bg-white/5 text-[#E51B23]">
+              ✉
+            </div>
+
+            <div>
+              <p class="text-xs font-bold uppercase tracking-wider
+                        text-blue-100/40">
+                Email
+              </p>
+
+              <a href="mailto:admin@rancontracting.com "
+                 class="mt-1 block break-all text-sm text-blue-100/70
+                        transition hover:text-white">
+                admin@rancontracting.com 
+              </a>
+            </div>
+
+          </div>
+
+
+          <!-- CTA -->
+          <a href="tel:+971567116993"
+             class="group mt-2 inline-flex items-center gap-3 rounded-full
+                    bg-[#E51B23] px-6 py-3 text-sm font-bold text-white
+                    shadow-lg shadow-black/10 transition
+                    hover:-translate-y-1 hover:bg-[#C9151C]">
+
+            Let's Talk
+
+            <span class="transition group-hover:translate-x-1">
+              →
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  
+
+  </div>
+
+
+  <!-- ================= COPYRIGHT BAR ================= -->
+  <div class="border-t border-white/10">
+
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-6
+                text-center sm:px-8 md:flex-row md:items-center
+                md:justify-between md:text-left lg:px-10">
+
+      <p class="text-xs text-blue-100/45 sm:text-sm">
+        © 2026
+        <span class="font-semibold text-blue-100/70">
+          RAN Contracting
+        </span>.
+        All rights reserved.
+      </p>
+
+
+
+    </div>
+
+  </div>
+
+</footer>
+ <!-- Floating WhatsApp Button + Chat Box -->
+<div id="whatsapp-widget" class="fixed bottom-6 right-6 z-50">
+  
+  <!-- Chat Box -->
+  <div id="chat-box" class="hidden mb-3 w-72 bg-white shadow-xl rounded-2xl border border-gray-200 overflow-hidden transition-all duration-300">
+    <div class="bg-green-600 text-white p-4 flex items-center justify-between">
+      <div>
+        <h3 class="font-bold text-lg">WhatsApp Chat</h3>
+        <p class="text-sm text-white/80">Chat Support</p>
+      </div>
+      <button id="close-chat" class="text-white text-xl leading-none">&times;</button>
+    </div>
+
+    <div class="p-4 text-gray-700 text-sm">
+      👋 **Hello!**  
+      How can we help you today?
+    </div>
+
+    <div class="p-4 bg-gray-100">
+      <a href="https://wa.me/971543994914 " 
+         target="_blank"
+         class="w-full block text-center bg-green-600 text-white font-semibold py-2 rounded-xl shadow hover:bg-green-700 transition">
+        Start Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <button id="chat-btn"
+          class="bg-green-600 hover:bg-green-700 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center animate-bounce">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-8 h-8">
+  </button>
+</div>
+
+<script>
+  const chatBtn = document.getElementById("chat-btn");
+  const chatBox = document.getElementById("chat-box");
+  const closeChat = document.getElementById("close-chat");
+
+  chatBtn.addEventListener("click", () => {
+    chatBox.classList.toggle("hidden");
+  });
+
+  closeChat.addEventListener("click", () => {
+    chatBox.classList.add("hidden");
+  });
+</script>
+</body>
+</html>
