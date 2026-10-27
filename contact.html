@@ -427,221 +427,269 @@
 
 
 
-      <!-- ===================================================
-           RIGHT — CONTACT FORM
-      ==================================================== -->
+ 
+<!-- =====================================================
+     RIGHT — MATERIAL QUOTATION ENQUIRY FORM
+====================================================== -->
 
-      <div class="rounded-[2rem] border border-slate-200
-                  bg-white p-6 shadow-xl shadow-[#0B2A63]/5
-                  sm:p-8 lg:p-10">
+<div class="rounded-[2rem] border border-slate-200
+            bg-white p-6 shadow-xl shadow-[#0B2A63]/5
+            sm:p-8 lg:p-10">
 
-        <div>
+  <!-- Form Header -->
+  <div>
+    <span class="text-[10px] font-black uppercase
+                 tracking-[0.2em] text-[#E51B23]">
+      Material Supply & Procurement
+    </span>
 
-          <span class="text-[10px] font-black uppercase
-                       tracking-[0.2em] text-[#E51B23]">
+    <h3 class="mt-3 text-2xl font-black text-[#0B2A63]
+               sm:text-3xl">
+      Request a Material Quotation
+    </h3>
 
-            Start a Conversation
+    <p class="mt-3 text-sm leading-7 text-slate-500">
+      Share your project requirements and upload your BOQ
+      or material list. Our team will review your enquiry
+      and contact you regarding your quotation.
+    </p>
+  </div>
 
-          </span>
+  <!-- Quotation Form -->
+  <form action="send-quotation.php"
+        method="POST"
+        enctype="multipart/form-data"
+        class="mt-8 space-y-5">
 
+    <!-- Client Name -->
+    <div>
+      <label for="quotation-name"
+             class="mb-2 block text-xs font-bold text-[#0B2A63]">
+        Full Name *
+      </label>
+      <input id="quotation-name"
+             type="text"
+             name="name"
+             autocomplete="name"
+             placeholder="Enter your full name"
+             required
+             class="w-full rounded-xl border border-slate-200
+                    bg-[#F8FAFC] px-4 py-3.5 text-sm
+                    outline-none transition
+                    placeholder:text-slate-400
+                    focus:border-[#0B2A63] focus:bg-white
+                    focus:ring-4 focus:ring-[#0B2A63]/5">
+    </div>
 
-          <h3 class="mt-3 text-2xl font-black text-[#0B2A63]
-                     sm:text-3xl">
+    <!-- Email and Phone -->
+    <div class="grid gap-5 sm:grid-cols-2">
+      <div>
+        <label for="quotation-email"
+               class="mb-2 block text-xs font-bold text-[#0B2A63]">
+          Email Address *
+        </label>
+        <input id="quotation-email"
+               type="email"
+               name="email"
+               autocomplete="email"
+               placeholder="you@example.com"
+               required
+               class="w-full rounded-xl border border-slate-200
+                      bg-[#F8FAFC] px-4 py-3.5 text-sm
+                      outline-none transition
+                      placeholder:text-slate-400
+                      focus:border-[#0B2A63] focus:bg-white
+                      focus:ring-4 focus:ring-[#0B2A63]/5">
+      </div>
 
-            Tell Us About Your Project
+      <div>
+        <label for="quotation-phone"
+               class="mb-2 block text-xs font-bold text-[#0B2A63]">
+          Phone Number *
+        </label>
+        <input id="quotation-phone"
+               type="tel"
+               name="phone"
+               autocomplete="tel"
+               placeholder="+971 / +92"
+               required
+               class="w-full rounded-xl border border-slate-200
+                      bg-[#F8FAFC] px-4 py-3.5 text-sm
+                      outline-none transition
+                      placeholder:text-slate-400
+                      focus:border-[#0B2A63] focus:bg-white
+                      focus:ring-4 focus:ring-[#0B2A63]/5">
+      </div>
+    </div>
 
-          </h3>
+    <!-- Company -->
+    <div>
+      <label for="quotation-company"
+             class="mb-2 block text-xs font-bold text-[#0B2A63]">
+        Company Name
+      </label>
+      <input id="quotation-company"
+             type="text"
+             name="company"
+             autocomplete="organization"
+             placeholder="Enter your company name (optional)"
+             class="w-full rounded-xl border border-slate-200
+                    bg-[#F8FAFC] px-4 py-3.5 text-sm
+                    outline-none transition
+                    placeholder:text-slate-400
+                    focus:border-[#0B2A63] focus:bg-white
+                    focus:ring-4 focus:ring-[#0B2A63]/5">
+    </div>
 
+    <!-- Project Location -->
+    <div>
+      <label for="quotation-location"
+             class="mb-2 block text-xs font-bold text-[#0B2A63]">
+        Project Location *
+      </label>
+      <input id="quotation-location"
+             type="text"
+             name="project_location"
+             placeholder="e.g. Dubai, Abu Dhabi, UAE"
+             required
+             class="w-full rounded-xl border border-slate-200
+                    bg-[#F8FAFC] px-4 py-3.5 text-sm
+                    outline-none transition
+                    placeholder:text-slate-400
+                    focus:border-[#0B2A63] focus:bg-white
+                    focus:ring-4 focus:ring-[#0B2A63]/5">
+    </div>
 
-          <p class="mt-3 text-sm leading-7 text-slate-500">
-
-            Fill out the form and our team will get back to you
-            as soon as possible.
-
-          </p>
-
-        </div>
-
-
-        <form class="mt-8 space-y-5">
-
-
-          <!-- Name -->
-
-          <div>
-
-            <label class="mb-2 block text-xs font-bold
-                          text-[#0B2A63]">
-
-              Full Name
-
-            </label>
-
-            <input type="text"
-                   placeholder="Enter your name"
-                   class="w-full rounded-xl border border-slate-200
-                          bg-[#F8FAFC] px-4 py-3.5 text-sm
-                          outline-none transition
-                          placeholder:text-slate-400
-                          focus:border-[#0B2A63]
-                          focus:bg-white
-                          focus:ring-4
-                          focus:ring-[#0B2A63]/5">
-
-          </div>
-
-
-
-          <!-- Email + Phone -->
-
-          <div class="grid gap-5 sm:grid-cols-2">
-
-            <div>
-
-              <label class="mb-2 block text-xs font-bold
-                            text-[#0B2A63]">
-
-                Email Address
-
-              </label>
-
-              <input type="email"
-                     placeholder="you@example.com"
-                     class="w-full rounded-xl border border-slate-200
-                            bg-[#F8FAFC] px-4 py-3.5 text-sm
-                            outline-none transition
-                            placeholder:text-slate-400
-                            focus:border-[#0B2A63]
-                            focus:bg-white
-                            focus:ring-4
-                            focus:ring-[#0B2A63]/5">
-
-            </div>
-
-
-            <div>
-
-              <label class="mb-2 block text-xs font-bold
-                            text-[#0B2A63]">
-
-                Phone Number
-
-              </label>
-
-              <input type="tel"
-                     placeholder="+971 / +92"
-                     class="w-full rounded-xl border border-slate-200
-                            bg-[#F8FAFC] px-4 py-3.5 text-sm
-                            outline-none transition
-                            placeholder:text-slate-400
-                            focus:border-[#0B2A63]
-                            focus:bg-white
-                            focus:ring-4
-                            focus:ring-[#0B2A63]/5">
-
-            </div>
-
-          </div>
-
-
-
-          <!-- Service -->
-
-          <div>
-
-            <label class="mb-2 block text-xs font-bold
-                          text-[#0B2A63]">
-
-              Service Required
-
-            </label>
-
-            <select
+    <!-- Material Category -->
+    <div>
+      <label for="quotation-category"
+             class="mb-2 block text-xs font-bold text-[#0B2A63]">
+        Material Category *
+      </label>
+      <select id="quotation-category"
+              name="material_category"
+              required
               class="w-full rounded-xl border border-slate-200
                      bg-[#F8FAFC] px-4 py-3.5 text-sm
                      text-slate-600 outline-none transition
-                     focus:border-[#0B2A63]
-                     focus:bg-white
-                     focus:ring-4
-                     focus:ring-[#0B2A63]/5">
+                     focus:border-[#0B2A63] focus:bg-white
+                     focus:ring-4 focus:ring-[#0B2A63]/5">
+        <option value="">Select material category</option>
+        <option value="Electrical Materials">Electrical Materials</option>
+        <option value="Lighting">Lighting Fixtures & Solutions</option>
+        <option value="CCTV and Security">CCTV & Security Systems</option>
+        <option value="BMS">BMS & Building Automation</option>
+        <option value="Networking and IT">Networking & IT Materials</option>
+        <option value="Cables and Accessories">Cables & Accessories</option>
+        <option value="Multiple Categories">Multiple Categories</option>
+        <option value="Other">Other Materials</option>
+      </select>
+    </div>
 
-              <option>Select a service</option>
+    <!-- BOQ / Material List Upload -->
+    <div>
+      <label for="quotation-file"
+             class="mb-2 block text-xs font-bold text-[#0B2A63]">
+        Upload BOQ / Material List
+      </label>
 
-              <option>General Contracting</option>
-              <option>MEP Services</option>
-              <option>Electrical Services</option>
-              <option>HVAC Solutions</option>
-              <option>Fire Fighting Systems</option>
-              <option>Civil Construction</option>
-              <option>Telecommunication</option>
-              <option>Equipment Rental</option>
-              <option>Other</option>
+      <label for="quotation-file"
+             class="group flex cursor-pointer flex-col items-center
+                    justify-center rounded-2xl border-2
+                    border-dashed border-slate-300 bg-[#F8FAFC]
+                    px-5 py-7 text-center transition
+                    hover:border-[#0B2A63] hover:bg-blue-50/50">
 
-            </select>
+        <span class="flex h-12 w-12 items-center justify-center
+                     rounded-xl bg-[#0B2A63]/5 text-[#0B2A63]
+                     transition group-hover:bg-[#0B2A63]
+                     group-hover:text-white">
 
-          </div>
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none">
+            <path d="M12 16V4m0 0L7 9m5-5 5 5M5 14v5h14v-5"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"/>
+          </svg>
+        </span>
 
+        <span class="mt-3 text-sm font-bold text-[#0B2A63]">
+          Click to upload your BOQ or material list
+        </span>
 
+        <span class="mt-1 text-xs leading-5 text-slate-500">
+          PDF, Excel, Word, or CSV files
+        </span>
 
-          <!-- Message -->
+        <span id="quotation-file-name"
+              class="mt-2 break-all text-xs font-semibold text-[#E51B23]">
+          No file selected
+        </span>
 
-          <div>
+      </label>
 
-            <label class="mb-2 block text-xs font-bold
-                          text-[#0B2A63]">
+      <input id="quotation-file"
+             type="file"
+             name="boq_file"
+             accept=".pdf,.xls,.xlsx,.doc,.docx,.csv"
+             class="sr-only"
+             onchange="document.getElementById('quotation-file-name').textContent = this.files.length ? this.files[0].name : 'No file selected'">
 
-              Message
+      <p class="mt-2 text-xs leading-5 text-slate-400">
+        Optional. Please upload a file within your server's permitted
+        upload size. You can also describe your requirements below.
+      </p>
+    </div>
 
-            </label>
+    <!-- Requirements -->
+    <div>
+      <label for="quotation-details"
+             class="mb-2 block text-xs font-bold text-[#0B2A63]">
+        Material Specifications & Requirements *
+      </label>
+      <textarea id="quotation-details"
+                name="requirements"
+                rows="5"
+                required
+                placeholder="List the materials, quantities, brands, technical specifications, delivery requirements, or any other project details..."
+                class="w-full resize-y rounded-xl border border-slate-200
+                       bg-[#F8FAFC] px-4 py-3.5 text-sm
+                       outline-none transition
+                       placeholder:text-slate-400
+                       focus:border-[#0B2A63] focus:bg-white
+                       focus:ring-4 focus:ring-[#0B2A63]/5"></textarea>
+    </div>
 
-            <textarea rows="5"
-                      placeholder="Tell us about your requirements..."
-                      class="w-full resize-none rounded-xl
-                             border border-slate-200
-                             bg-[#F8FAFC] px-4 py-3.5 text-sm
-                             outline-none transition
-                             placeholder:text-slate-400
-                             focus:border-[#0B2A63]
-                             focus:bg-white
-                             focus:ring-4
-                             focus:ring-[#0B2A63]/5"></textarea>
+    <!-- Submit -->
+    <button type="submit"
+            class="group flex w-full items-center justify-center
+                   gap-3 rounded-xl bg-[#0B2A63] px-6 py-4
+                   text-sm font-black text-white
+                   shadow-lg shadow-[#0B2A63]/15
+                   transition-all duration-300
+                   hover:-translate-y-1 hover:bg-[#E51B23]">
 
-          </div>
+      Request My Quotation
 
+      <svg class="h-4 w-4 transition-transform
+                  group-hover:translate-x-1"
+           viewBox="0 0 24 24" fill="none">
+        <path d="M5 12h14m-6-6 6 6-6 6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"/>
+      </svg>
+    </button>
 
+    <p class="text-center text-xs leading-5 text-slate-400">
+      Your project information will be used to respond to your
+      quotation enquiry.
+    </p>
 
-          <!-- Submit -->
-
-          <button type="submit"
-                  class="group flex w-full items-center
-                         justify-center gap-3 rounded-xl
-                         bg-[#0B2A63] px-6 py-4
-                         text-sm font-black text-white
-                         shadow-lg shadow-[#0B2A63]/15
-                         transition-all duration-300
-                         hover:-translate-y-1
-                         hover:bg-[#E51B23]">
-
-            Send Your Message
-
-            <svg class="h-4 w-4 transition-transform
-                        group-hover:translate-x-1"
-                 viewBox="0 0 24 24"
-                 fill="none">
-
-              <path d="M5 12h14M13 6l6 6-6 6"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"/>
-
-            </svg>
-
-          </button>
-
-        </form>
-
-      </div>
+  </form>
+</div>
 
     </div>
 
